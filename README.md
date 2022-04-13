@@ -48,7 +48,7 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	Creating openface         ... done
 	```
     
-  	* You can use ```bash docker ps``` to other details regarding the running containers. 
+  	* You can use ```docker ps``` to other details regarding the running containers. 
 2. Extracting features using openface
   	- To run openface on the video that you copied, use the command below.
 	```bash
