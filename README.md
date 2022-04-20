@@ -7,7 +7,7 @@ This is a repository containing jupyter-notebooks that explore different modalit
 In this course, you will be analyzing your own videos. To get the environment with all the necessary packages here we are going to use docker. The Docker container will be used as a development environment where you will run all the jupyter-notebooks.  
 
 ### Docker compose
-The Only dependency that you are required to install is Docker and Docker-compose. Please refer to the original instructions provided by docker.
+The only dependency that you are required to install is Docker and Docker-compose. Please refer to the original instructions provided by docker.
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker-compose](https://docs.docker.com/compose/install/)
 * Check that docker installation was successful using the command ``` docker run hello-world ```
@@ -48,7 +48,7 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	Creating openface         ... done
 	```
     
-  	* You can use ```bash docker ps``` to other details regarding the running containers. 
+  	* You can use ```docker ps``` to other details regarding the running containers. 
 2. Extracting features using openface
   	- To run openface on the video that you copied, use the command below.
 	```bash
