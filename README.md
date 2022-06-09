@@ -92,7 +92,7 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	```
 Additional Info-
 
-To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running docker-compose up -D):
+To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running ```docker-compose up -d```):
 ``` bash
 docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
 ```
