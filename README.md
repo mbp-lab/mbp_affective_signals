@@ -90,7 +90,8 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	Removing jupyter_notebook ... done
 	Removing network affectivesignals_default  
 	```
-Additional Info:
+Additional Info-
+
 To run the affectiveSignalsHeart.ipynb, run the command below after you start the container :
 ``` bash
 docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
