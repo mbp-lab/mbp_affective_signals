@@ -1,7 +1,7 @@
 # Multimodal Behavior Processing: Affective Signals
-SoSe 2022 Bielefeld University
+SoSe 2023 Bielefeld University
 
-This is a repository containing jupyter-notebooks that explore different modalities that are used in multimodal analysis of human behaviour. More information about the course can be found [here](https://ekvv.uni-bielefeld.de/kvv_publ/publ/Veranstaltung_Detail.jsp)
+This is a repository containing jupyter-notebooks that explore different modalities that are used in multimodal analysis of human behaviour. More information about the course can be found [here](https://ekvv.uni-bielefeld.de/kvv_publ/publ/vd?id=395414864)
 
 ## Installation Instructions
 In this course, you will be analyzing your own videos. To get the environment with all the necessary packages here we are going to use docker. The Docker container will be used as a development environment where you will run all the jupyter-notebooks.  
@@ -10,7 +10,10 @@ In this course, you will be analyzing your own videos. To get the environment wi
 The only dependency that you are required to install is Docker and Docker-compose. Please refer to the original instructions provided by docker.
 * [Docker](https://docs.docker.com/engine/install/)
 * [Docker-compose](https://docs.docker.com/compose/install/)
+* WARNING: Running ```docker-compose up -d``` takes quite a bit of time (~15 minutes)
 * Check that docker installation was successful using the command ``` docker run hello-world ```
+
+If you run into problems, check the FAQ at the bottom of this README.
 
 
 ## Getting Started with the Notebooks
@@ -96,3 +99,12 @@ To run the affectiveSignalsHeart.ipynb, run the command below after you start th
 ``` bash
 docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
 ```
+
+## FAQ
+* ```docker-desktop : Depends on: docker-ce-cli but is not installable; E: Problems can't be fixed, you have held back broken packages```
+	-> make sure the [setup the docker repository] (https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository) first 
+* ```ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?```
+	-> run command with sudo, or manage docker rights
+* ```PermissionError: [Errno 13] Permission denied```
+	-> run command with sudo, or manage docker rights
+
