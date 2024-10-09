@@ -1,5 +1,5 @@
 # Multimodal Behavior Processing: Affective Signals
-SoSe 2023 Bielefeld University
+WiSe 2024/25 Bielefeld University
 
 This is a repository containing jupyter-notebooks that explore different modalities that are used in multimodal analysis of human behaviour. More information about the course can be found [here](https://ekvv.uni-bielefeld.de/kvv_publ/publ/vd?id=395414864)
 
