@@ -99,6 +99,7 @@ To run the affectiveSignalsHeart.ipynb, run the command below after you start th
 ``` bash
 docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
 ```
+=> on Mac you have to replace the quotes of --ip="*" to single quotes!
 
 ## FAQ
 * ```docker-desktop : Depends on: docker-ce-cli but is not installable; E: Problems can't be fixed, you have held back broken packages```
