@@ -67,7 +67,11 @@ As mentioned earlier, we will be using docker to run the notebooks.
 3. Running the jupyter-notebook:
 	- To start the jupyter-notebook instance, use the command below:
 	``` bash
-	docker exec -it jupyter_notebook jupyter-notebook --no-browser --ip="*" --allow-root 
+	docker exec -it --user root jupyter_notebook bash -c "apt-get update && apt-get install -y libmagic1 file && source /root/.bashrc && cd /home/ && jupyter-notebook --no-browser --ip='*' --allow-root"
+	```
+	or
+	``` bash
+	docker exec -it -w /home/ jupyter_notebook bash -c "source /root/.bashrc && jupyter-notebook --no-browser --ip='*' --allow-root"
 	```
 	- Example output to the above command.
     	```console
