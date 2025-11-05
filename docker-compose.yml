@@ -4,7 +4,8 @@ services:
   ## This can be used to add volume mounts or pass environment variables
   ## Todo: make a service which can use the container interactively
   notebook:
-    image: bhargav28/jupyter_signal:pyvhr
+    #image: bhargav28/jupyter_signal:pyvhr
+    image: 78485/rppg_custom:latest
     container_name: jupyter_notebook
     #build:
     # context: .
