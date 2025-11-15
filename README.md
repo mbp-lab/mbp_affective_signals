@@ -69,10 +69,6 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	``` bash
 	docker exec -it jupyter_notebook jupyter-notebook --no-browser --ip="*" --allow-root 
 	```
- 	- The affectiveSignalsBreathing.ipynb notebook has extra system dependencies, so it must be launched using a 	different run command:
-	``` bash
-	docker exec -it --user root jupyter_notebook bash -c "apt-get update && apt-get install -y libmagic1 file && source /root/.bashrc && cd /home/ && jupyter-notebook --no-browser --ip='*' --allow-root"
- 	```
 
 	- Example output to the above command.
     	```console
@@ -100,11 +96,16 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	```
 Additional Info-
 
-To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running ```docker-compose up -d```):
+- To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running ```docker-compose up -d```):
 ``` bash
 docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
 ```
 => on Mac you have to replace the quotes of --ip="*" to single quotes!
+
+- To run the affectiveSignalsBreathing.ipynb, use the command below after you start the container (after running docker-compose up -d):
+``` bash
+docker exec -it --user root jupyter_notebook bash -c "apt-get update && apt-get install -y libmagic1 file && source /root/.bashrc && cd /home/ && jupyter-notebook --no-browser --ip='*' --allow-root"
+```
 
 ## FAQ
 * ```docker-desktop : Depends on: docker-ce-cli but is not installable; E: Problems can't be fixed, you have held back broken packages```
