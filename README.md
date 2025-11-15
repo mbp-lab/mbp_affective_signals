@@ -69,6 +69,11 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	``` bash
 	docker exec -it jupyter_notebook jupyter-notebook --no-browser --ip="*" --allow-root 
 	```
+ 	- The affectiveSignalsBreathing.ipynb notebook has extra system dependencies, so it must be launched using a 	different run command:
+	``` bash
+	docker exec -it --user root jupyter_notebook bash -c "apt-get update && apt-get install -y libmagic1 file && source /root/.bashrc && cd /home/ && jupyter-notebook --no-browser --ip='*' --allow-root"
+ 	```
+
 	- Example output to the above command.
     	```console
 		To access the notebook, open this file in a browser:
