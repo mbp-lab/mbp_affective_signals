@@ -98,7 +98,13 @@ Additional Info-
 
 - To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running ```docker-compose up -d```):
 ``` bash
-docker exec -it -w /home/ jupyter_notebook bash -c "source ~/.bashrc; jupyter-notebook --no-browser --ip="*" --allow-root" 
+docker exec -it --user root jupyter_notebook bash -c "
+apt-get update &&
+apt-get install -y libmagic1 file &&
+source ~/.bashrc &&
+cd /home &&
+jupyter-notebook --no-browser --ip=0.0.0.0 --allow-root
+"
 ```
 => on Mac you have to replace the quotes of --ip="*" to single quotes!
 
