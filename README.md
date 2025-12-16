@@ -106,7 +106,6 @@ cd /home &&
 jupyter-notebook --no-browser --ip=0.0.0.0 --allow-root
 "
 ```
-=> on Mac you have to replace the quotes of --ip="*" to single quotes!
 
 - To run the affectiveSignalsBreathing.ipynb, use the command below after you start the container (after running docker-compose up -d):
 ``` bash
