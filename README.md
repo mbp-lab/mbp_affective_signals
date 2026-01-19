@@ -96,7 +96,7 @@ As mentioned earlier, we will be using docker to run the notebooks.
 	```
 Additional Info-
 
-- To run the affectiveSignalsHeart.ipynb, run the command below after you start the container (after running ```docker-compose up -d```):
+- To run the affectiveSignalsHeart.ipynb and affectiveSignalsBreathing.ipynb run the command below after you start the container (after running ```docker-compose up -d```):
 ``` bash
 docker exec -it --user root jupyter_notebook bash -c "
 apt-get update &&
@@ -105,11 +105,6 @@ source ~/.bashrc &&
 cd /home &&
 jupyter-notebook --no-browser --ip=0.0.0.0 --allow-root
 "
-```
-
-- To run the affectiveSignalsBreathing.ipynb, use the command below after you start the container (after running docker-compose up -d):
-``` bash
-docker exec -it --user root jupyter_notebook bash -c "apt-get update && apt-get install -y libmagic1 file && source /root/.bashrc && cd /home/ && jupyter-notebook --no-browser --ip='*' --allow-root"
 ```
 
 ## FAQ
